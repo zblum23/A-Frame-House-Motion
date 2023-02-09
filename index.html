@@ -1,0 +1,239 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+        <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
+    
+    </head>
+    
+<body>
+    <a-scene>
+<a-entity id="rig"
+            movement-control="fly: true; speed 0.3">
+        <a-entity camera
+                    position="0 1.6 0"
+                    look-controls>
+        </a-entity>
+        </a-entity>
+<assets>
+        <img id="brickwall" src="assets/brickwall.jpg">
+        <img id="window" src="assets/window.jpg">
+        <img id="door" src="assets/door.jpg">
+        <img id="roof" src="assets/roof.jpg">
+        <img id="floor" src="assets/floor.jpg">
+</assets>
+        
+<a-entity environment="preset: forest; groundColor: #445; grid: cross"></a-entity>
+    <!-- house entity -->
+    <!--front left wall  -->
+       <a-entity>
+    <a-box
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="-1.741 2.013 -5.000"
+        scale="1.000 1.000 1.000"
+        ></a-box>
+    <!-- door -->
+    <a-box
+        src="#door"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="0.378 1.511 -5.958"
+        scale="0.458 0.731 1.000"
+        rotation="0 82.972 0"></a-box>
+        
+    <!-- top of door frame -->
+        <a-box
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="1.213 3.478 -5.000"
+        scale="0.473 0.255 1.000"
+        ></a-box>
+    <!-- front right wall -->
+    <a-box
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="4.013 2.008 -5.000"
+        scale="1.000 1.000 1.000"
+        ></a-box>
+    <!-- floor -->
+    <a-box
+        src="#floor"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="1.124 0 -9.087"
+        scale="2.437 2.036 -1.707"
+        rotation="90 0 0"></a-box>
+        <!-- right wall -->
+    <a-box
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="5.942 1.928 -9.014"
+        scale="1.994 1.036 1.000"
+        rotation="-180.000 90.000 -180.000"></a-box>
+        <!-- back wall -->
+    <a-box
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="1.139 2.023 -13.075"
+        scale="2.418 1 1"
+        rotation="0 180 0"></a-box>
+        <!-- left wall -->
+    <a-box
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="-3.755 1.972 -9.034"
+        scale="2.035 1 1"
+        rotation="0 90 0"></a-box>
+        <!-- roof left -->
+    <a-box
+        src="#roof"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="-1.424 5.841 -8.948"
+        scale="2.035 1.704 1.000"
+        rotation="50.000 90 0"></a-box>
+    <!-- roof right -->
+    <a-box
+        src="#roof"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="3.763 5.841 -8.948"
+        scale="2.035 1.704 1.000"
+        rotation="50.000 -90 0"></a-box>
+   <!-- roof triangle -->
+        <a-triangle
+         src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="1.256 5.896 -4.962"
+        scale="10.292 4.369 1"
+        side="double"
+    ></a-triangle>
+        
+    <a-triangle
+        src="#brickwall"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="1.256 5.896 -13.016"
+        scale="10.292 4.369 1"
+        side="double"
+    ></a-triangle>
+
+<!-- window 1 -->
+<a-box
+        src="#window"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="-3.748 1.947 -8.752"
+        scale="0.653 0.654 2.035"
+        rotation="0 90 0"></a-box>
+<!-- window 2 -->
+<a-box
+        src="#window"
+        repeat="1 1"
+        height="4" width="4" depth="0.1"
+        position="5.905 1.947 -8.752"
+        scale="0.653 0.654 2.035"
+        rotation="0 90 0"></a-box>
+    </a-entity>
+    <!--snowman entity  -->
+<a-entity
+    position="0 -0 8.538"
+    rotation="180 0 180">
+        <a-sphere 
+        color="white" 
+        position="0 1 -3" 
+        radius="1.0">
+    </a-sphere>
+        <a-sphere 
+        color="white" 
+        position="0 2.4 -3" 
+        radius=".75">
+    </a-sphere>
+    <a-sphere 
+        color="white" 
+        position="0 3.5 -3" 
+        radius=".45" >
+    </a-sphere>
+    
+    <a-sphere
+         color="Black"
+          position="0 1 -2" 
+          radius=".2">
+    </a-sphere>
+    <a-sphere 
+        color="Black" 
+        position="0 2.32 -2.3" 
+        radius=".2">
+    </a-sphere>
+       
+    <a-cylinder 
+        color="black"
+         position="0 3.8. -3" 
+         radius=".9" 
+         height="0.02">
+    </a-cylinder>
+    <a-cylinder 
+        color="black" 
+        position="0 4.0 -3" 
+        radius=".6" 
+        height="0.6">
+    </a-cylinder>
+
+    <a-sphere 
+        color="Black" 
+        position=" -.2 3.5.0 -2.6"
+        radius=".05">
+    </a-sphere>
+    <a-sphere 
+        color="Black" 
+        position=" .2 3.5.0 -2.6" 
+        radius=".05">
+    </a-sphere>
+        <a-cone 
+        color="orange" 
+        position="0 3.4 -2.6" 
+        radius-bottom=".1" 
+        height=".2" 
+        rotation="90">
+    </a-cone>
+    
+    <a-cylinder 
+        color="brown" 
+        position=".7 2.5 -3" 
+        radius=".1" 
+        height="2" 
+        rotation="90 90">
+    </a-cylinder>
+    <a-cylinder
+        color="brown" 
+        position="-.7 2.5 -3" 
+        radius=".1" 
+        height="2" 
+        rotation="90 90">
+    </a-cylinder>
+    <a-sphere
+        color="Black"
+        position="0.023 3.295 -2.595" 
+        radius=".07">
+    </a-sphere>
+    
+    <a-sphere
+        color="Black"
+        position="0.169 3.318 -2.630" 
+        radius=".07">
+    </a-sphere>
+    
+    <a-sphere
+        color="Black"
+        position="-0.134 3.321 -2.587" 
+        radius=".07">
+    </a-scene>
+    </body>
+    </html>
